@@ -8,7 +8,19 @@ import streamlit as st
 import pandas as pd
 
 
-# In[4]:
+# In[5]:
+
+
+df = pd.read_csv('vilnius weather.csv')
+
+
+# In[13]:
+
+
+df['day'] = pd.to_datetime(df['day'])
+
+
+# In[21]:
 
 
 st.write("""
@@ -16,6 +28,6 @@ st.write("""
 Hello *world!*
 """)
 
-df = pd.read_csv('vilnius weather.csv')
-st.line_chart(df)
+
+st.line_chart(df.groupby(df.day)['temperature'].max())
 
