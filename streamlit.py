@@ -20,12 +20,17 @@ df = pd.read_csv('vilnius weather.csv')
 df['day'] = pd.to_datetime(df['day'])
 
 
-# In[21]:
+# **This is my first app in  Streamlit.**
+# 
+# The graph below represents daily temperature in Vilnius in January 2023.
+
+# In[22]:
 
 
 st.write("""
-#my first app
-Hello *world!*
+**This is my first app in *Streamlit*!**
+
+The graph below represents daily temperature in Vilnius in January 2023.
 """)
 
 
